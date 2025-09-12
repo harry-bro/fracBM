@@ -1,8 +1,7 @@
 # fracbm
 
   
-
-Fractional Brownian Motion (fBM) generators in Python.
+Fractional Brownian Noise (fGN) and Fractional Brownian Motion (fBM) generators in Python.
 
   
 
@@ -18,17 +17,24 @@ pip  install  fracbm
 
   
 ```bash
+import matplotlib.pyplot as plt
+import fracbm
 
-import  matplotlib.pyplot  as  plt
+# Parameters
+n = 1000      # number of steps
+H = 0.8       # Hurst parameter
 
-import  fracbm
+# Fractional Brownian motion using Davies–Harte
+fbm_path = fracbm.daviesharte.motion(n, H)      # cumulative sum of fGn
+fgn_increments = fracbm.daviesharte.noise(n, H) # fractional Gaussian noise
 
-# Generate with Davies–Harte method. 1000 steps with a Hurst parameter of 0.8
-
-B  =  fracbm.daviesharte(n=1000, H=0.8)
-
-plt.plot(B)
-
+# Plot the full fBm path
+plt.figure(figsize=(10, 4))
+plt.plot(fbm_path, label="fBm path (Davies–Harte)")
+plt.xlabel("Step")
+plt.ylabel("Value")
+plt.title("Fractional Brownian Motion (H=0.8, Davies–Harte)")
+plt.legend()
 plt.show()
 
 ```

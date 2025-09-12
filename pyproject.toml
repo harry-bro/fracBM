@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fracbm"
-version = "0.1.1"
-description = "Fractional Brownian Motion (fBM) generators in Python."
+version = "0.2.0"
+description = "Fractional Brownian Noise (fGN) and Fractional Brownian Motion (fBM) generators in Python."
 readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "MIT" }

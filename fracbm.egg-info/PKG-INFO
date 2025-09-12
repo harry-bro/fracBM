@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: fracbm
-Version: 0.1.1
+Version: 0.1.2
 Summary: Fractional Brownian Motion (fBM) generators in Python.
 Author-email: Harry Brozel <harrybrozel@gmail.com>
 License: MIT
@@ -18,7 +18,7 @@ Dynamic: license-file
 
   
 
-Fractional Brownian Motion (FBM) generators in Python.
+Fractional Brownian Motion (fBM) generators in Python.
 
   
 

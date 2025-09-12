@@ -1,5 +1,5 @@
 """
-Fractional Brownian Motion (FBM) generators.
+Fractional Brownian Motion (fBM) generators.
 """
 
 from .generate import cholesky, daviesharte

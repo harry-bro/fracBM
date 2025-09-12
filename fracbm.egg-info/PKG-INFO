@@ -26,7 +26,7 @@ Fractional Brownian Motion (FBM) generators in Python.
 
 ```bash
 
-pip  install  fgn
+pip  install  fracbm
 
 ```
 
@@ -39,7 +39,7 @@ import  matplotlib.pyplot  as  plt
 
 import  fracbm
 
-# Generate with Davies–Harte method
+# Generate with Davies–Harte method. 1000 steps with a Hurst parameter of 0.8
 
 B  =  fracbm.daviesharte(n=1000, H=0.8)
 

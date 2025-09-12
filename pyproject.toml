@@ -21,9 +21,9 @@ classifiers = [
 ]
 
 dependencies = [
-  "numpy"
+  "numpy",
   "scipy"
-]
+  ]
 
 [project.urls]
 Homepage = "https://github.com/harry-bro/fracbm"

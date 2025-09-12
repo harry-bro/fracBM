@@ -2,7 +2,7 @@
 
   
 
-Fractional Brownian Motion (FBM) generators in Python.
+Fractional Brownian Motion (fBM) generators in Python.
 
   
 

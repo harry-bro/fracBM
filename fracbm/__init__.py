@@ -17,4 +17,4 @@ from . import daviesharte
 
 __all__ = ["cholesky", "daviesharte"]
 
-__version__ = "0.2.0"
+__version__ = "0.2.1"

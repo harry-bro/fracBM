@@ -1,7 +1,7 @@
 # fracbm
 
   
-Fractional Brownian Noise (fGN) and Fractional Brownian Motion (fBM) generators in Python.
+Fractional Gaussian Noise (fGN) and Fractional Brownian Motion (fBM) generators.
 
   
 

@@ -3,6 +3,10 @@
   
 Fractional Gaussian Noise (fGN) and Fractional Brownian Motion (fBM) generators.
 
+<p align="left">
+  <img src="terrain.gif" alt='terrain gen with fbm' width="400"/>
+</p>
+
   
 
 ## Installation

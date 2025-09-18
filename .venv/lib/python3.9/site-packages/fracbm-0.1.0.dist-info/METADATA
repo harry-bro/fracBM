@@ -1,0 +1,64 @@
+Metadata-Version: 2.4
+Name: fracbm
+Version: 0.1.0
+Summary: Fractional Brownian Motion (fBM) generators in Python.
+Author-email: Harry Brozel <harrybrozel@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/harry-bro/fracbm
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Dynamic: license-file
+
+# fracbm
+
+  
+
+Fractional Brownian Motion (FBM) generators in Python.
+
+  
+
+## Installation
+
+```bash
+
+pip  install  fgn
+
+```
+
+## Usage
+
+  
+```bash
+
+import  matplotlib.pyplot  as  plt
+
+import  fracbm
+
+# Generate with Davies–Harte method
+
+B  =  fracbm.daviesharte(n=1000, H=0.8)
+
+plt.plot(B)
+
+plt.show()
+
+```
+
+
+## Features
+
+Generate exact fractional Brownian motion using:
+
+-   **Cholesky decomposition**, order $\mathcal{O}(n^3)$
+-   **Davies-Harte method**, order $\mathcal{O}(n \log n)$ 	(recommended)  
+
+Vary the Hurst parameter $H \in [0,1]$:
+
+-   $H = 0.5$ is regular Brownian motion.
+-   $H > 0.5$ causes slowly decaying positive autocorrelations (positive increments tend to follow positive increments - increments follow a trend).
+-   $H < 0.5$ causes fast-decaying negative autocorrelations (negative increments tend to follow positive increments - increments revert to the mean).

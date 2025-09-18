@@ -1,5 +1,5 @@
 import numpy as np
-from scipy.linalg import toeplitz
+from scipy.linalg import toeplitz # type: ignore
 
 
 #generating the two types of covariance needed
@@ -22,3 +22,24 @@ def toeplitzMAT(n, H):
     """Return Toeplitz covariance matrix of size (n, n)"""
     r = toeplitzVEC(n, H)  # 1D vector
     return toeplitz(r)      # full (n,n) matrix
+
+
+def weighted_least_squares_matrix(x, y, weights):
+    X = np.vstack([np.ones(len(x)), x]).T
+    Y = np.asarray(y)
+    W = np.diag(weights)
+    beta = np.linalg.inv(X.T @ W @ X) @ (X.T @ W @ Y)
+    return beta
+
+def weighted_least_squares(x, y, w):
+    W = np.sum(w)
+    x_bar = np.sum(w * x) / W
+    y_bar = np.sum(w * y) / W
+
+    num = np.sum(w * (x - x_bar) * (y - y_bar))
+    den = np.sum(w * (x - x_bar)**2)
+    m = num / den
+
+    a = y_bar - m * x_bar
+
+    return a, m

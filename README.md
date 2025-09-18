@@ -31,11 +31,11 @@ H = 0.7       # Hurst parameter
 fbm_path = fracbm.daviesharte.motion(n, H)      # cumulative sum of fGn
 fgn_increments = fracbm.daviesharte.noise(n, H) # fractional Gaussian noise
 
-#Wavelet based estimation of Hurst exponent
+# Wavelet based estimation of Hurst exponent
 estimated_hurst = fracbm.invhurst(fbm_path)
 print(f'Estimated Hurst Exponent = {estimated_hurst}')
 
-# Plot the full fBm path and 
+# Plot the full fBm path
 plt.figure(figsize=(10, 4))
 plt.plot(fbm_path, label="fBm path (Davies–Harte)")
 plt.xlabel("Step")

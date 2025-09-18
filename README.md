@@ -28,7 +28,7 @@ n = 10000      # number of steps
 H = 0.7       # Hurst parameter
 
 # Fractional Brownian motion using Davies–Harte
-fbm_path = fracbm.daviesharte.motion(n, H)      # cumulative sum of fGn
+fbm_path = fracbm.daviesharte.motion(n, H)      # cumulative sum of fGN
 fgn_increments = fracbm.daviesharte.noise(n, H) # fractional Gaussian noise
 
 # Wavelet based estimation of Hurst exponent
@@ -37,7 +37,7 @@ print(f'Estimated Hurst Exponent = {estimated_hurst}')
 
 # Plot the full fBm path
 plt.figure(figsize=(10, 4))
-plt.plot(fbm_path, label="fBm path (Davies–Harte)")
+plt.plot(fbm_path, label="fBM path (Davies–Harte)")
 plt.xlabel("Step")
 plt.ylabel("Value")
 plt.title("Fractional Brownian Motion (H=0.8, Davies–Harte)")

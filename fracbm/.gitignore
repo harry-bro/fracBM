@@ -14,3 +14,6 @@ dist/
 # IDE / editor settings
 .vscode/
 .idea/
+
+# macOS system files
+.DS_Store
